@@ -14,6 +14,11 @@ config/name="burnout"
 run/main_scene="res://health_bar.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+HealthBar="*res://scenes/health_bar.tscn"
+CursorManager="*res://scenes/cursorManager.tscn"
+
 [display]
 
 window/size/width=265

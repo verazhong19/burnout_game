@@ -2,11 +2,16 @@
 
 importer="texture"
 type="StreamTexture"
-valid=false
+path="res://.import/hover.png-570d9d639c1bdae98e4db33e150c6a3a.stex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://assets/cursor.png"
+source_file="res://assets/cursor/hover.png"
+dest_files=[ "res://.import/hover.png-570d9d639c1bdae98e4db33e150c6a3a.stex" ]
+
 [params]
 
 compress/mode=0

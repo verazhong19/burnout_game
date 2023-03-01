@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/energyLevel/process.png" type="Texture" id=2]
-[ext_resource path="res://healthBar.gd" type="Script" id=3]
+[ext_resource path="res://scripts/healthBar.gd" type="Script" id=3]
 [ext_resource path="res://assets/energyLevel/bar.png" type="Texture" id=4]
 
 [node name="UI" type="Control"]
