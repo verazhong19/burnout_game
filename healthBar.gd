@@ -4,22 +4,23 @@ var currentHealth
 var newHealth
 var currentTaskTime
 var newTaskTime
-var timer = 10
+var timer = 1
 onready var damage_button = $damage_button
 var taskTimer = 1
 var taskActive =  false
-var full=190
+
 
 func _ready():
 	damage_button.connect("pressed", self, "_button_pressed")
 
 	
 func _process(delta):
+	var full=190
 	currentHealth = get_node("TextureProgress").get_value()
 	if currentHealth <full:
 		timer -= delta
 		if timer < 0:
-			print('heal!')
+			#print('heal!')
 			passiveHeal()
 			timer = 1
 	
