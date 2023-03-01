@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="burnout"
-run/main_scene="res://health_bar.tscn"
+run/main_scene="res://scenes/health_bar.tscn"
 config/icon="res://icon.png"
 
 [autoload]
