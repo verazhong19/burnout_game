@@ -21,10 +21,10 @@ texture_progress = ExtResource( 2 )
 texture_progress_offset = Vector2( 2, 2 )
 
 [node name="damage_button" type="Button" parent="."]
-margin_left = 11.0
-margin_top = 81.0
-margin_right = 188.0
-margin_bottom = 101.0
+margin_left = 12.0
+margin_top = 105.0
+margin_right = 189.0
+margin_bottom = 125.0
 text = "do task"
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
@@ -39,3 +39,28 @@ margin_left = 20.0
 margin_top = 224.0
 margin_right = 590.0
 margin_bottom = 339.0
+
+[node name="Task" type="Label" parent="."]
+margin_left = 12.0
+margin_top = 34.0
+margin_right = 55.0
+margin_bottom = 48.0
+
+[node name="AssignedBy" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 49.0
+margin_right = 56.0
+margin_bottom = 63.0
+
+[node name="Message" type="Label" parent="."]
+margin_left = 14.0
+margin_top = 63.0
+margin_right = 57.0
+margin_bottom = 77.0
+
+[node name="Due" type="Label" parent="."]
+margin_left = 15.0
+margin_top = 76.0
+margin_right = 58.0
+margin_bottom = 90.0
+text = "4"
