@@ -5,6 +5,7 @@ onready var art_button = $art
 onready var model_button = $model
 onready var engine_button = $engine
 onready var task = $"../Task"
+onready var validation = $"../Validation"
 
 func _ready():
 	code_button.connect("pressed", self, "_button_pressed",[code_button])
@@ -18,5 +19,7 @@ func _button_pressed(button):
 #	print(button.text)
 	if(task.text == button.text):
 		print("correct task")
+		validation.text = "correct task"
 	else:
 		print("wrong task")
+		validation.text = "wrong task"

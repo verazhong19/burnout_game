@@ -12,7 +12,7 @@ var taskActive =  false
 onready var taskLabel= $Task
 onready var assigner = $AssignedBy
 onready var message = $Message
-onready var due = $Due
+
 var taskSeed
 var rng : RandomNumberGenerator = RandomNumberGenerator.new()
 
