@@ -19,7 +19,7 @@ var rng : RandomNumberGenerator = RandomNumberGenerator.new()
 
 func _ready():
 	damage_button.connect("pressed", self, "_button_pressed")
-	print(task.availableTasks[0]["task"])
+#	print(task.availableTasks[0]["task"])
 
 	
 func _process(delta):
@@ -45,6 +45,8 @@ func _process(delta):
 func _button_pressed():
 	setDamage()
 	taskSeed = rng.randi_range(0, task.availableTasks.size()-1)
+	task.activeTasks.append(task.availableTasks[taskSeed])
+	#print(task.activeTasks.size())
 	taskLabel.text = task.availableTasks[taskSeed]["task"]
 	assigner.text = task.availableTasks[taskSeed]["assignedBy"]
 	message.text = task.availableTasks[taskSeed]["message"]

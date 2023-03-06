@@ -9,3 +9,5 @@ var availableTasks = [{"task": "code", "assignedBy": "manager", "timeToComplete"
 	{"task": "git", "assignedBy": "coworker", "timeToComplete": 3, "message": "I need the updated version of the code. Can you push your changes to LitHub?", "isCompleted": false},
 	{"task": "art", "assignedBy": "manager", "timeToComplete": 5, "message": "I want to test out a new mechanic and need a character sprite. Can u draw one for me?", "isCompleted": false},
 	{"task": "engine", "assignedBy": "manager", "timeToComplete": 5, "message": "Need some new level designs. Mind prototyping something in Anarky?", "isCompleted": false} ]
+
+var activeTasks = []
