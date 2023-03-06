@@ -13,6 +13,8 @@ onready var taskLabel= $Task
 onready var assigner = $AssignedBy
 onready var message = $Message
 onready var due = $Due
+var taskSeed
+var rng : RandomNumberGenerator = RandomNumberGenerator.new()
 
 
 func _ready():
@@ -42,9 +44,10 @@ func _process(delta):
 
 func _button_pressed():
 	setDamage()
-	taskLabel.text = task.availableTasks[0]["task"]
-	assigner.text = task.availableTasks[0]["assignedBy"]
-	message.text = task.availableTasks[0]["message"]
+	taskSeed = rng.randi_range(0, task.availableTasks.size()-1)
+	taskLabel.text = task.availableTasks[taskSeed]["task"]
+	assigner.text = task.availableTasks[taskSeed]["assignedBy"]
+	message.text = task.availableTasks[taskSeed]["message"]
 
 
 	
