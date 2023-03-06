@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://scenes/do_task.gd" type="Script" id=1]
 [ext_resource path="res://assets/energyLevel/process.png" type="Texture" id=2]
 [ext_resource path="res://scripts/healthBar.gd" type="Script" id=3]
 [ext_resource path="res://assets/energyLevel/bar.png" type="Texture" id=4]
@@ -25,7 +26,7 @@ margin_left = 12.0
 margin_top = 105.0
 margin_right = 189.0
 margin_bottom = 125.0
-text = "do task"
+text = "get task"
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 margin_left = 19.0
@@ -64,3 +65,43 @@ margin_top = 76.0
 margin_right = 58.0
 margin_bottom = 90.0
 text = "4"
+
+[node name="Tasks" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="code" type="Button" parent="Tasks"]
+margin_left = 143.0
+margin_top = 20.0
+margin_right = 186.0
+margin_bottom = 40.0
+text = "code"
+
+[node name="git" type="Button" parent="Tasks"]
+margin_left = 144.0
+margin_top = 45.0
+margin_right = 172.0
+margin_bottom = 65.0
+text = "git"
+
+[node name="art" type="Button" parent="Tasks"]
+margin_left = 146.0
+margin_top = 71.0
+margin_right = 175.0
+margin_bottom = 91.0
+text = "art"
+
+[node name="model" type="Button" parent="Tasks"]
+margin_left = 212.0
+margin_top = 21.0
+margin_right = 265.0
+margin_bottom = 41.0
+text = "model"
+
+[node name="engine" type="Button" parent="Tasks"]
+margin_left = 206.0
+margin_top = 50.0
+margin_right = 261.0
+margin_bottom = 70.0
+text = "engine"
