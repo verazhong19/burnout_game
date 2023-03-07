@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://scripts/do_task.gd" type="Script" id=1]
 [ext_resource path="res://assets/energyLevel/process.png" type="Texture" id=2]
@@ -25,6 +25,8 @@
 [ext_resource path="res://assets/desktop/apps/mailBox/mailbox.png" type="Texture" id=23]
 [ext_resource path="res://assets/desktop/apps/mailBox/mailboxHover.png" type="Texture" id=24]
 [ext_resource path="res://assets/desktop/apps/PS/PSHover.png" type="Texture" id=25]
+[ext_resource path="res://assets/desktop/Background.png" type="Texture" id=26]
+[ext_resource path="res://themes/fontTheme.tres" type="Theme" id=27]
 
 [sub_resource type="Theme" id=2]
 
@@ -53,6 +55,14 @@ value = 100.0
 texture_under = ExtResource( 4 )
 texture_progress = ExtResource( 2 )
 texture_progress_offset = Vector2( 2, 2 )
+
+[node name="Label" type="Label" parent="TextureProgress"]
+margin_top = -15.0
+margin_right = 49.0
+margin_bottom = -1.0
+theme = ExtResource( 27 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "ENERGY LEVEL"
 
 [node name="damage_button" type="Button" parent="."]
 margin_left = 108.0
@@ -85,6 +95,7 @@ margin_left = 13.0
 margin_top = 49.0
 margin_right = 56.0
 margin_bottom = 63.0
+theme = ExtResource( 27 )
 
 [node name="Message" type="Label" parent="."]
 margin_left = 119.0
@@ -190,8 +201,8 @@ script = ExtResource( 12 )
 text = "startMenu"
 
 [node name="Label" type="Label" parent="Desktop/StartButton"]
-margin_left = 11.0
-margin_right = 31.0
+margin_left = 12.0
+margin_right = 32.0
 margin_bottom = 13.0
 theme = SubResource( 3 )
 text = "START"
@@ -205,4 +216,9 @@ default_cursor = ExtResource( 20 )
 [node name="Sprite" type="Sprite" parent="cursorManager"]
 position = Vector2( -13, 19 )
 texture = ExtResource( 20 )
+centered = false
+
+[node name="Background" type="Sprite" parent="."]
+z_index = -20
+texture = ExtResource( 26 )
 centered = false

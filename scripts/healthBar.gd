@@ -25,6 +25,7 @@ func _process(delta):
 			timer = 1
 	
 	if currentHealth <= 0:
+		print('die!')
 		get_tree().change_scene("res://scenes/GameOver.tscn")
 	
 	if taskActive == true:	
