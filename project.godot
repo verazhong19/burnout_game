@@ -17,15 +17,16 @@ config/icon="res://icon.png"
 [autoload]
 
 HealthBar="*res://scenes/health_bar.tscn"
-CursorManager="*res://scenes/cursorManager.tscn"
 TaskManager="*res://scenes/taskManager.tscn"
 
 [display]
 
 window/size/width=256
 window/size/height=150
+window/size/always_on_top=true
 window/size/test_width=1024
 window/size/test_height=600
+mouse_cursor/custom_image="res://assets/cursor/empty.png"
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 

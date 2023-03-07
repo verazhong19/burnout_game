@@ -16,7 +16,6 @@ func _ready():
 	
 func _button_pressed(button):
 #	checkTask()
-#	print(button.text)
 	if(task.text == button.text):
 		print("correct task")
 		validation.text = "correct task"

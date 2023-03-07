@@ -5,10 +5,11 @@
 [ext_resource path="res://assets/cursor/empty.png" type="Texture" id=3]
 
 [node name="cursorManager" type="CanvasLayer"]
-layer = 10
+layer = 100
 script = ExtResource( 1 )
 empty_cursor = ExtResource( 3 )
+default_cursor = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 5, 9 )
+position = Vector2( 9, 11 )
 texture = ExtResource( 2 )
