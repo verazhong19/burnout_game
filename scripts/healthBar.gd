@@ -8,7 +8,14 @@ var timer = 1
 onready var damage_button = $damage_button
 var taskTimer = 1
 var taskActive =  false
-
+onready var task = get_node("/root/TaskManager")
+onready var taskLabel = $Task
+onready var assigner = $AssignedBy
+onready var message = $Message
+var taskSeed
+var rng : RandomNumberGenerator = RandomNumberGenerator.new()
+var totalActiveTasks
+var activeTasks = []
 
 func _ready():
 	damage_button.connect("pressed", self, "_button_pressed")
@@ -28,18 +35,30 @@ func _process(delta):
 		print('die!')
 		get_tree().change_scene("res://scenes/GameOver.tscn")
 	
-	if taskActive == true:	
-		taskTimer -= delta
-		if taskTimer < 0:
-			taskInProgress()
-			taskTimer = 1
-	
-
+		
+		
 func _button_pressed():
 	setDamage()
+	assignTask()
+	print(activeTasks)
+	for task in activeTasks:
+			var task_key = task["task"]
+			var label = Label.new()
+			label.text = task_key
+			$VBoxContainer.add_child(label)
+	
+	
 
 
 	
+func assignTask():
+	taskSeed = rng.randi_range(0, task.availableTasks.size()-1)
+	activeTasks.append(task.availableTasks[taskSeed])
+	taskActive = true
+	taskLabel.text = task.availableTasks[taskSeed]["task"]
+	assigner.text = task.availableTasks[taskSeed]["assignedBy"]
+	message.text = task.availableTasks[taskSeed]["message"]
+
 
 func setDamage():
 	currentHealth = get_node("TextureProgress").get_value()
