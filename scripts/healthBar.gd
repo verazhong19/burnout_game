@@ -17,6 +17,10 @@ var rng : RandomNumberGenerator = RandomNumberGenerator.new()
 var totalActiveTasks
 var activeTasks = []
 
+var regMouse = preload("res://assets/cursor/cursor.png")
+var hoverMouse = preload("res://assets/cursor/hover.png")
+
+
 func _ready():
 	damage_button.connect("pressed", self, "_button_pressed")
 
@@ -30,6 +34,7 @@ func _process(delta):
 			#print('heal!')
 			passiveHeal()
 			timer = 1
+	hover()
 	
 	if currentHealth <= 0:
 		print('die!')
@@ -48,7 +53,13 @@ func _button_pressed():
 			$VBoxContainer.add_child(label)
 	
 	
-
+func hover():
+	var buttons=get_node("Tasks")
+	if(buttons.get_node("code").is_hovered() ||buttons.get_node("git").is_hovered() ||buttons.get_node("art").is_hovered() ||buttons.get_node("model").is_hovered() ||buttons.get_node("engine").is_hovered() || buttons.get_node("mailbox").is_hovered()):
+		get_node("cursorManager/Sprite").set_texture(hoverMouse)
+	else:
+		get_node("cursorManager/Sprite").set_texture(regMouse)
+	
 
 	
 func assignTask():
@@ -76,4 +87,5 @@ func taskInProgress():
 	newTaskTime = get_node("ProgressBar").set_value(currentTaskTime + 1)
 
 
+	
 	

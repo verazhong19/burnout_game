@@ -220,7 +220,7 @@ empty_cursor = ExtResource( 21 )
 default_cursor = ExtResource( 20 )
 
 [node name="Sprite" type="Sprite" parent="cursorManager"]
-position = Vector2( -13, 19 )
+position = Vector2( 213, 40 )
 texture = ExtResource( 20 )
 centered = false
 
